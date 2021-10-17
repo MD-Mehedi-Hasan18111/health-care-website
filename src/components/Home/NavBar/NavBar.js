@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     return (
-        <Navbar style={{ backgroundColor: "#2c3e50" }} variant="dark" expand="lg">
-            <Container>
+        <Navbar className="sticky-top" style={{ backgroundColor: "#2c3e50" }} variant="dark" expand="lg">
+            <div className="container">
                 <Navbar.Brand>
                     <img width="60px" src={logo} alt="" />
                 </Navbar.Brand>
@@ -25,7 +25,7 @@ const NavBar = () => {
                         <Nav.Link><Link to="/blogs">Blogs</Link></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
-            </Container>
+            </div>
         </Navbar>
     );
 };
