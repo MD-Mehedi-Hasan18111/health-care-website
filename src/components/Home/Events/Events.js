@@ -5,8 +5,10 @@ const Events = () => {
     return (
         <div className="events-area my-4">
             <div className="container">
-                <span><i class="fas fa-grip-horizontal fs-1 mt-3"></i></span>
-                <h1 className="heading mb-3">Upcoming <span>Events</span></h1>
+                <div className="text-center mb-5">
+                    <span><i class="fas fa-grip-horizontal fs-1 mt-3"></i></span>
+                    <h1 className="heading mb-3">Upcoming <span>Events</span></h1>
+                </div>
                 <div className="row row-cols-lg-3 row-cols-md-2 row-cols-1 g-5">
                     <div className="col">
                         <img className="w-100 mb-3" height="200px" src="https://in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-peerless-hospital-vaccination-program-covaxin-0-2021-8-10-t-19-30-35.jpg" alt="" />
