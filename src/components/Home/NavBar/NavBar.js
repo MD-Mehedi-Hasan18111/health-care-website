@@ -7,7 +7,8 @@ import useAuth from '../../../context/useAuth';
 
 const NavBar = () => {
 
-    const [user, logOut] = useAuth();
+    const { firebases } = useAuth();
+    const [user, logOut] = firebases;
 
     const history = useHistory();
 

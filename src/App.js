@@ -13,6 +13,8 @@ import Signup from './components/Singup/Signup';
 import Signin from './components/Signin/Signin';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Appoinment from './components/Appoinment/Appoinment';
+import AppoinmentAlert from './components/AppoinmentAlert/AppoinmentAlert';
 
 function App() {
   return (
@@ -32,9 +34,9 @@ function App() {
             <Route path="/services">
               <AllServices />
             </Route>
-            <Route path="/details/:id">
+            <PrivateRoute path="/details/:id">
               <ServiceDetails />
-            </Route>
+            </PrivateRoute>
             <Route path="/doctors">
               <Doctors />
             </Route>
@@ -50,6 +52,12 @@ function App() {
             <Route path="/signin">
               <Signin />
             </Route>
+            <PrivateRoute path="/appointment">
+              <Appoinment />
+            </PrivateRoute>
+            <PrivateRoute path="/appointment-success">
+              <AppoinmentAlert />
+            </PrivateRoute>
           </Switch>
         </BrowserRouter>
       </AuthProvider>

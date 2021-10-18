@@ -5,10 +5,12 @@ import NavBar from '../Home/NavBar/NavBar';
 import './Signin.css';
 import { useLocation, useHistory } from 'react-router-dom';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import Footer from '../Home/Footer/Footer';
 
 const Signin = () => {
 
-    const [user, setUser, googleSignIn] = useAuth();
+    const { firebases } = useAuth();
+    const [user, setUser, googleSignIn] = firebases;
 
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
@@ -65,6 +67,7 @@ const Signin = () => {
                     <button onClick={signInGoogle} className="gBtn mt-2"><i class="fab fa-google"></i> Sign In With Google</button>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

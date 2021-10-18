@@ -2,14 +2,14 @@
     background-image: url('../../images/auth-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 110vh;
+    height: 100vh;
 }
 
 .sign-form{
     width: 35%;
     margin: 0 auto;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px 0 70px 0;
 }
 
 .sign-form input{

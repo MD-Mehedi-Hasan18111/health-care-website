@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import useService from '../../hooks/useService';
 import Footer from '../Home/Footer/Footer';
 import NavBar from '../Home/NavBar/NavBar';
@@ -25,7 +26,9 @@ const ServiceDetails = () => {
                         <h3>{service?.name}</h3>
                         <p className="fw-bold fs-5 text-danger">Department: {service?.type}</p>
                         <p>{service?.description}</p>
-                        <button className="btn btn-danger">Appoint Now <i class="fas fa-arrow-circle-right"></i></button>
+                        <Link to="/appointment">
+                            <button className="btn btn-danger">Appoint Now <i class="fas fa-arrow-circle-right"></i></button>
+                        </Link>
                     </div>
                     <div className="col-lg-6 col-md-6 col-sm-12">
                         <img width="100%" src={service?.image} alt="" />

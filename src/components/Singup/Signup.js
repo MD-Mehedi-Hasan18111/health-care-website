@@ -5,10 +5,12 @@ import useAuth from '../../context/useAuth';
 import { getAuth, createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { useLocation, useHistory } from 'react-router-dom';
 import NavBar from '../Home/NavBar/NavBar';
+import Footer from '../Home/Footer/Footer';
 
 const Signup = () => {
 
-    const [user, setUser, googleSignIn] = useAuth();
+    const { firebases } = useAuth();
+    const [user, setUser, googleSignIn] = firebases;
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -86,6 +88,7 @@ const Signup = () => {
                     <button onClick={signInGoogle} className="gBtn mt-2"><i class="fab fa-google"></i> Sign In With Google</button>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };
