@@ -28,11 +28,10 @@ const useFirebase = () => {
     //     onAuthStateChanged(auth, (user) => {
     //         if (user) {
     //             setUser(user);
-    //         }
-    //         else {
+    //         } else {
     //             setUser({});
     //         }
-    //     })
+    //     });
     // }, [])
 
     return [user, setUser, googleSignIn, logOut];
