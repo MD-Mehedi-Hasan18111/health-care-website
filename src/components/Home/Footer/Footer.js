@@ -36,10 +36,10 @@ const Footer = () => {
                     <div className="col-lg-6 col-md-6 col-sm-12 text-center">
                         <h6>Social Links</h6>
                         <div className="social-links">
-                            <i class="fab fa-facebook-square"></i>
-                            <i class="fab fa-instagram-square"></i>
-                            <i class="fab fa-linkedin"></i>
-                            <i class="fab fa-twitter-square"></i>
+                            <i className="fab fa-facebook-square"></i>
+                            <i className="fab fa-instagram-square"></i>
+                            <i className="fab fa-linkedin"></i>
+                            <i className="fab fa-twitter-square"></i>
                         </div>
                     </div>
                 </div>
