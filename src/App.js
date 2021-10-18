@@ -7,6 +7,8 @@ import About from './components/About/About';
 import AllServices from './components/AllServices/AllServices';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import Doctors from './components/Doctors/Doctors';
+import Blogs from './components/Blogs/Blogs';
+import BlogDetails from './components/BlogDetails/BlogDetails';
 
 function App() {
   return (
@@ -30,6 +32,12 @@ function App() {
           </Route>
           <Route path="/doctors">
             <Doctors />
+          </Route>
+          <Route path="/blogs">
+            <Blogs />
+          </Route>
+          <Route path="/blog/:id">
+            <BlogDetails />
           </Route>
         </Switch>
       </BrowserRouter>
