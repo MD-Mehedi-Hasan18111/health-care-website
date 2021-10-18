@@ -6,6 +6,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import About from './components/About/About';
 import AllServices from './components/AllServices/AllServices';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
+import Doctors from './components/Doctors/Doctors';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route path="/details/:id">
             <ServiceDetails />
+          </Route>
+          <Route path="/doctors">
+            <Doctors />
           </Route>
         </Switch>
       </BrowserRouter>
