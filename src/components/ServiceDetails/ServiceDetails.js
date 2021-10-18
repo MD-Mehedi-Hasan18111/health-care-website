@@ -21,7 +21,7 @@ const ServiceDetails = () => {
             <NavBar />
             <div className="container">
                 <div className="row d-flex align-items-center p-5">
-                    <div className="col-lg-6 col-md-6 col-sm-12">
+                    <div className="col-lg-6 col-md-6 col-sm-12 mb-3">
                         <h3>{service?.name}</h3>
                         <p className="fw-bold fs-5 text-danger">Department: {service?.type}</p>
                         <p>{service?.description}</p>
