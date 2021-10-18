@@ -15,6 +15,7 @@ import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Appoinment from './components/Appoinment/Appoinment';
 import AppoinmentAlert from './components/AppoinmentAlert/AppoinmentAlert';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -58,6 +59,9 @@ function App() {
             <PrivateRoute path="/appointment-success">
               <AppoinmentAlert />
             </PrivateRoute>
+            <Route path="*">
+              <NotFound />
+            </Route>
           </Switch>
         </BrowserRouter>
       </AuthProvider>
