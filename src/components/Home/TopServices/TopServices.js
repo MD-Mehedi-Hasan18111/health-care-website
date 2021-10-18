@@ -1,17 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import useService from '../../../hooks/useService';
 import ServiceCard from '../../ServiceCard/ServiceCard';
 import './TopServices.css';
 
 const TopServices = () => {
 
-    const [services, setServices] = useState([]);
-
-    useEffect(() => {
-        const url = 'https://raw.githubusercontent.com/MD-Mehedi-Hasan18111/health-care-data/main/services.json';
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setServices(data))
-    }, [])
+    const [services, setServices] = useService();
 
     // console.log(services);
 

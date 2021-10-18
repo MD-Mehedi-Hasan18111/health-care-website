@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './ServiceCard.css';
 
 const ServiceCard = (props) => {
 
     console.log(props.service);
 
-    const { image, name, type } = props.service;
+    const { id, image, name, type } = props.service;
 
     return (
         <div className="col">
@@ -18,7 +19,9 @@ const ServiceCard = (props) => {
                     <h5 class="card-title">{name}</h5>
                 </div>
                 <div className="card-footer text-center">
-                    <button className="btn btn-primary m-2 w-100">See Details</button>
+                    <Link to={`/details/${id}`}>
+                        <button className="btn btn-primary m-2 w-100">See Details</button>
+                    </Link>
                 </div>
             </div>
         </div>
