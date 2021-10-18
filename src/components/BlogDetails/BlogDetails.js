@@ -26,7 +26,7 @@ const BlogDetails = () => {
             <div className="container">
                 <h1>{blogData?.name}</h1>
                 <div className="text-center my-4">
-                    <img height="400px" width="600px" src={blogData?.image} alt="" />
+                    <img height="400px" width="100%" src={blogData?.image} alt="" />
                 </div>
                 <p>{blogData?.description}</p>
                 <div className="text-center my-3">
