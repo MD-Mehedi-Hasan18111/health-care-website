@@ -15,26 +15,20 @@ const useFirebase = () => {
         return signInWithPopup(auth, googleProvider)
     }
 
-    const logOut = () => {
-        signOut(auth).then(res => {
-            setUser({});
+    useEffect(() => {
+        const unsubscribed = onAuthStateChanged(auth, user => {
+            if (user) {
+                setUser(user);
+            }
+            else {
+                setUser({});
+            }
         })
-            .catch(error => {
+        return () => unsubscribed;
+    }, [])
 
-            })
-    }
 
-    // useEffect(() => {
-    //     onAuthStateChanged(auth, (user) => {
-    //         if (user) {
-    //             setUser(user);
-    //         } else {
-    //             setUser({});
-    //         }
-    //     });
-    // }, [])
-
-    return [user, setUser, googleSignIn, logOut];
+    return [user, setUser, googleSignIn];
 }
 
 export default useFirebase;

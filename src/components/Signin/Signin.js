@@ -23,12 +23,9 @@ const Signin = () => {
 
     const signInGoogle = () => {
         googleSignIn()
-            .then(res => {
-                setUser(res.user);
+            .then(result => {
+                setUser(result.user);
                 history.push(redirect_url);
-            })
-            .catch(error => {
-
             })
     }
 

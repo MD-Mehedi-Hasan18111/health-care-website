@@ -1,5 +1,6 @@
 import React from 'react';
-import { Redirect, Route } from 'react-router';
+import { Spinner } from 'react-bootstrap';
+import { Redirect, Route, useHistory } from 'react-router';
 import useAuth from '../../context/useAuth';
 
 const PrivateRoute = ({ children, ...rest }) => {
@@ -11,7 +12,7 @@ const PrivateRoute = ({ children, ...rest }) => {
         <Route
             {...rest}
             render={({ location }) =>
-                user.email ? (
+                user?.email ? (
                     children
                 ) : (
                     <Redirect
