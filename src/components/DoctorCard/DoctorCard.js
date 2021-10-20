@@ -11,7 +11,7 @@ const DoctorCard = (props) => {
                 <div>
                     <img height="350px" width="100%" src={image} alt="" />
                 </div>
-                <div>
+                <div className="mt-4">
                     <h5>{name}</h5>
                     <p>{Speciality}</p>
                 </div>
