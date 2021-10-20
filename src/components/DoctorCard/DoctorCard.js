@@ -7,7 +7,7 @@ const DoctorCard = (props) => {
 
     return (
         <div>
-            <div className="card-area text-center">
+            <div className="text-center">
                 <div>
                     <img height="350px" width="100%" src={image} alt="" />
                 </div>

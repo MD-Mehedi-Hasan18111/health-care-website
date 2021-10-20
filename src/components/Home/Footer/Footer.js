@@ -9,7 +9,9 @@ const Footer = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-4 col-md-4 col-sm-12">
-                        <img width="50px" src={logo} alt="" />
+                        <img width="50px" src={logo} alt="" /><br />
+                        <small>WE CARE is a simple acronym to guide<br /> how we interact with patients and one another.<br />
+                            It's a reminder for us all as<br /> Sansum Clinic employees, to commit.</small>
                     </div>
                     <div className="col-lg-4 col-md-4 col-sm-12">
                         <h5>Quick Links</h5>

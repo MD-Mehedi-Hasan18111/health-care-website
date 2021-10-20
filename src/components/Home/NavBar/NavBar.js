@@ -2,7 +2,7 @@ import React from 'react';
 import './NavBar.css';
 import logo from '../../../images/logo.png';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory, NavLink } from 'react-router-dom';
 import useAuth from '../../../context/useAuth';
 import { signOut, getAuth } from '@firebase/auth';
 
@@ -29,29 +29,30 @@ const NavBar = () => {
         history.push('/signin');
     }
 
+
     return (
-        <Navbar className="sticky-top" style={{ backgroundColor: "#2c3e50" }} variant="dark" expand="lg">
-            <div className="container-fluid px-5">
-                <Navbar.Brand>
+        <Navbar className="sticky-top" style={{ backgroundColor: "#2C3E50", padding: "10px" }} variant="dark" expand="lg">
+            <div className="container-fluid px-5 text-center">
+                <NavLink to='/'>
                     <img width="60px" src={logo} alt="" />
-                </Navbar.Brand>
+                </NavLink>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
                         className="navbar ms-auto my-2 my-lg-0"
-                        style={{ maxHeight: '100px', backgroundColor: "#2c3e50" }}
+                        style={{ backgroundColor: "#2c3e50" }}
                         navbarScroll
                     >
-                        <Nav.Link><Link to="/home">Home</Link></Nav.Link>
-                        <Nav.Link><Link to="/about">About</Link></Nav.Link>
-                        <Nav.Link><Link to="/services">All Service</Link></Nav.Link>
-                        <Nav.Link><Link to="/doctors">Doctors</Link></Nav.Link>
-                        <Nav.Link><Link to="/blogs">Blogs</Link></Nav.Link>
+                        <NavLink activeClassName="selected" to="/home">Home</NavLink>
+                        <NavLink activeClassName="selected" to="/about">About</NavLink>
+                        <NavLink activeClassName="selected" to="/services">All Service</NavLink>
+                        <NavLink activeClassName="selected" to="/doctors">Doctors</NavLink>
+                        <NavLink activeClassName="selected" to="/blogs">Blogs</NavLink>
                     </Nav>
                     <div className="text-center d-flex align-items-center">
                         <button onClick={toSignup} className="btn btn-danger btn-sm mx-4">Sign Up</button>
                         {
-                            user?.email ? <button onClick={logOut} className="btn btn-primary btn-sm mx-2">Sign Out</button> : <button onClick={toSignin} className="btn btn-primary btn-sm mx-2">Sign In</button>
+                            user?.email ? <button onClick={logOut} className="btn btn-danger btn-sm mx-2">Sign Out</button> : <button onClick={toSignin} className="btn btn-danger btn-sm mx-2">Sign In</button>
                         }
                         {
                             user?.email && user?.photoURL ? <div className="my-3 ms-2">

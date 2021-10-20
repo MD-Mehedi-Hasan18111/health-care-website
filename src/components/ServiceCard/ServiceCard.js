@@ -18,9 +18,9 @@ const ServiceCard = (props) => {
                 <div class="card-body text-center">
                     <h5 class="card-title">{name}</h5>
                 </div>
-                <div className="card-footer text-center">
+                <div className="text-center p-2">
                     <Link to={`/details/${id}`}>
-                        <button className="btn btn-primary m-2 w-100">See Details</button>
+                        <button className="btn detail-btn btn-danger m-2 w-75">See Details</button>
                     </Link>
                 </div>
             </div>

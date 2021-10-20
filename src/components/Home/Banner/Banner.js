@@ -1,30 +1,60 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Carousel, Col, Container, Row } from 'react-bootstrap';
 import './Banner.css';
 import logo from '../../../images/logo.png';
-import bannerImg from '../../../images/banner-img.png';
 import { Link } from 'react-router-dom';
+import banner1 from '../../../images/bg-1.jpg';
+import banner2 from '../../../images/bg-2.jpg';
+import banner3 from '../../../images/bg-3.jpg';
 
 const Banner = () => {
     return (
         <div className="banner-area" >
-            <div className="container">
-                <Row className="d-flex align-items-center">
-                    <Col lg={6} md={6} xs={12} className="text-center">
-                        <img width="140px" src={logo} alt="" />
-                        <h2>Welcome To<br /> We Care Hospital Ltd.</h2>
-                        <p><span className="fw-bold fs-5">WE CARE</span> is a simple acronym to guide how we interact with patients and one another. It's a reminder for us all as Sansum Clinic employees, to commit.</p>
-                        <div className="text-center">
-                            <Link to='/appointment'>
-                                <button className="btn btn-danger btn-lg">Appoint Now <i class="fas fa-arrow-circle-right"></i></button>
-                            </Link>
-                        </div>
-                    </Col>
-                    <Col lg={6} md={6} xs={12}>
-                        <img width="76%" src={bannerImg} alt="" />
-                    </Col>
-                </Row>
-            </div>
+            <Carousel>
+                <Carousel.Item className="overlay">
+                    <img
+                        className="d-block w-100 myImg"
+                        src={banner1}
+                        alt="First slide"
+                    />
+                    <Carousel.Caption>
+                        <h1>Welcome To<br /> <span className="hospital-name">We Care Hospital Ltd.</span></h1>
+                        <p><span className="fw-bold fs-5">WE CARE</span> is a simple acronym to guide how we interact with patients and one another.<br /> It's a reminder for us all as Sansum Clinic employees, to commit.</p>
+                        <Link to='/appointment'>
+                            <button className="btn btn-danger btn-lg">Appoint Now <i class="fas fa-arrow-circle-right"></i></button>
+                        </Link>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item className="overlay">
+                    <img
+                        className="d-block w-100 myImg"
+                        src={banner2}
+                        alt="Second slide"
+                    />
+                    <Carousel.Caption>
+                        <h1>We Have the Best Doctors<br />And ICU for you.</h1>
+                        <p><span className="fw-bold fs-5">WE CARE</span> is a simple acronym to guide how we interact with patients and one another.<br /> It's a reminder for us all as Sansum Clinic employees, to commit.</p>
+                        <Link to='/appointment'>
+                            <button className="btn btn-danger btn-lg">Appoint Now <i class="fas fa-arrow-circle-right"></i></button>
+                        </Link>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item className="overlay">
+                    <img
+                        className="d-block w-100 myImg"
+                        src={banner3}
+                        alt="Third slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h1>Our Hospital Ready to 24 Hours<br /> to give service.</h1>
+                        <p>WE CARE is a simple acronym to guide how we interact with patients and one another.<br /> It's a reminder for us all as Sansum Clinic employees, to commit.</p>
+                        <Link to='/appointment'>
+                            <button className="btn btn-danger btn-lg">Appoint Now <i class="fas fa-arrow-circle-right"></i></button>
+                        </Link>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            </Carousel>
         </div>
     );
 };

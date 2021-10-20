@@ -2,11 +2,33 @@
     text-decoration: none;
     color: #fff;
     font-size: 18px;
-    margin: 0 5px;
+    margin: 0 15px;
     transition: .3s;
 }
 
 .navbar a:hover{
+    color: #2ecc71;
+}
+
+.navbar a.selected{
+    color: #2ecc71;
+    position: relative;
+}
+
+.navbar a.selected::before{
+    position: absolute;
+    content: "";
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 30px;
     background-color: #2ecc71;
-    border-radius: 10px;
+}
+
+
+@media only screen and (max-width: 575px) {
+    .navbar a.selected::before{
+        width: 0;
+    }
 }

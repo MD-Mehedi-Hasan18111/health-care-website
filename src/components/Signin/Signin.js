@@ -57,7 +57,7 @@ const Signin = () => {
                     <form onSubmit={handleSignIn}>
                         <input onBlur={(e) => setEmail(e.target.value)} type="email" placeholder="Email" /><br /><br />
                         <input onBlur={(e) => setPassword(e.target.value)} type="password" placeholder="Password" /><br /><br />
-                        <Link to="/signup">Haven't You Account?</Link><br />
+                        <Link to="/signup">Create a new Account</Link><br />
                         <button type="submit" className="myBtn mt-3">Sign In <i class="fas fa-arrow-alt-circle-right"></i></button>
                     </form>
                     <p className="mt-3 fw-bold" ___>______________________OR_________________________</p>

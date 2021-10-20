@@ -81,7 +81,7 @@ const Signup = () => {
                         <input onBlur={(e) => setName(e.target.value)} type="text" placeholder="Name" /><br /><br />
                         <input onBlur={(e) => setEmail(e.target.value)} type="email" placeholder="Email" /><br /><br />
                         <input onBlur={(e) => setPassword(e.target.value)} type="password" placeholder="Password" /><br /><br />
-                        <Link to="/signin">Have you account?</Link><br />
+                        <Link to="/signin">Already have an account?</Link><br />
                         <button className="myBtn mt-3">Sign Up <i class="fas fa-arrow-alt-circle-right"></i></button>
                     </form>
                     <p className="mt-3 fw-bold" ___>______________________OR_________________________</p>
